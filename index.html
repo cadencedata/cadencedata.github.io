@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Cadence</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
+  </head>
+  <body class="helvetica">
+    <article class="cf ph3 ph5-ns pv5">
+      <header class="fn fl-ns w-40-ns pr4-ns">
+        <h1 class="f2 lh-title fw9 mb3 mt0 pt3 bt bw2">
+          Cadence
+        </h1>
+        <h2 class="f3 mid-gray lh-title">
+          Handle and access dynamic, distributed data across devices with ease.
+        </h2>
+        <div class="pv1 lh-copy">
+          <!--<a class="db link dim" href="/contact"><time class="f6 ttu tracked gray">Contact</time></a>
+          <a class="db link dim" href="/about"><time class="f6 ttu tracked gray pb2">About</time></a> 
+          <a class="db link dim" href="/workflow"><time class="f6 ttu tracked gray pb2">Workflow</time></a>
+          <a class="db link dim" href="#"><time class="f6 ttu tracked gray pb2">Login</time></a>-->
+        </div>
+
+      </header>
+      <div class="fn fl-ns w-60-ns">
+<h3>Data is hard.</h3>
+        <p class="f5 lh-copy measure mt0-ns">
+          Working with a single dataset is non-trivial. You need to provision compute nodes, set up a database, and perform a data pull to write to that database &mdash; and that's before you even start thinking about opening a database connection, writing SQL, and pulling data into your preferred analysis environment.
+        </p>
+        <h3>Dynamic, distributed data is harder.</h3>
+        <p class="f5 lh-copy measure">
+          The complexity scales exponentially with multiple dynamic datasets, each of which must be periodically updated to reflect some data source. To handle this case, you need to manually or programmatically trigger data pulls to the appropriate database. Your use case might even involve joins or merges across multiple databases.
+        </p>
+        <h3>All your data operations should be in one place.</h3>
+        <p class="f5 lh-copy measure">
+          Cadence is a hub for all your dynamic, distributed data operations. Write <b>lambdas</b> &mdash; operations that write to a database table &mdash; in Python, then schedule <b>jobs</b> to execute your lambdas at specified intervals and perform those writes. Monitor the health and activity of all of your jobs, compute nodes, and databases through Cadence's interface.
+        </p>
+        <h3>You should have a hassle-free API into your own data.</h3>
+        <p class="f5 lh-copy measure">
+          With Cadence, there's no need to include messy, meta-programmed SQL in your analysis scripts. Cadence lets you define SQL <b>hooks</b> for a specific job's data results, allowing you to write your query once and abstract it away. You can pull your data into your desired analysis environment with the hook you defined simply by hitting an API endpoint. Cadence even allows you to parametrize hooks for greater flexibility.
+        </p>
+      </div>
+    </article>
+  </body>
+</html>
