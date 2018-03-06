@@ -1,45 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Cadence</title>
+    <title> </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/jquery.fullpage.min.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/jquery.fullpage.min.js"></script>
+
   </head>
   <body class="helvetica">
-    <article class="cf ph3 ph5-ns pv5">
-      <header class="fn fl-ns w-40-ns pr4-ns">
-        <h1 class="f2 lh-title fw9 mb3 mt0 pt3 bt bw2">
-          Cadence
-        </h1>
-        <h2 class="f3 mid-gray lh-title">
-          Handle and access dynamic, distributed data across devices with ease.
-        </h2>
-        <div class="pv1 lh-copy">
-          <!--<a class="db link dim" href="/contact"><time class="f6 ttu tracked gray">Contact</time></a>
-          <a class="db link dim" href="/about"><time class="f6 ttu tracked gray pb2">About</time></a> 
-          <a class="db link dim" href="/workflow"><time class="f6 ttu tracked gray pb2">Workflow</time></a>
-          <a class="db link dim" href="#"><time class="f6 ttu tracked gray pb2">Login</time></a>-->
-        </div>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('#fullpage').fullpage({
+          //Navigation
+          //menu: '#menu',
+          //lockAnchors: false,
+          //anchors:['firstPage', 'secondPage'],
+          navigation: true,
+          //navigationPosition: 'right',
+          //navigationTooltips: ['firstSlide', 'secondSlide'],
+          //showActiveTooltip: false,
+          //slidesNavigation: true,
+          //slidesNavPosition: 'bottom',
 
-      </header>
-      <div class="fn fl-ns w-60-ns">
-<h3>Data is hard.</h3>
-        <p class="f5 lh-copy measure mt0-ns">
-          Working with a single dataset is non-trivial. You need to provision compute nodes, set up a database, and perform a data pull to write to that database &mdash; and that's before you even start thinking about opening a database connection, writing SQL, and pulling data into your preferred analysis environment.
-        </p>
-        <h3>Dynamic, distributed data is harder.</h3>
-        <p class="f5 lh-copy measure">
-          The complexity scales exponentially with multiple dynamic datasets, each of which must be periodically updated to reflect some data source. To handle this case, you need to manually or programmatically trigger data pulls to the appropriate database. Your use case might even involve joins or merges across multiple databases.
-        </p>
-        <h3>All your data operations should be in one place.</h3>
-        <p class="f5 lh-copy measure">
-          Cadence is a hub for all your dynamic, distributed data operations. Write <b>kits</b> — abstract operations on your data in any language you choose — then schedule <b>jobs</b> in our intelligent DAG scheduler to be deployed to remote instances as you choose. Cadence can infer implicit dependencies across these jobs and intelligently modify your schedule to avoid potential data corruption and maximize throughput. Cadence can also learn your jobs' write patterns and can notify you of any potential data problems it detects. Monitor the health and activity of all of your jobs and data targets through Cadence's interface.
-        </p>
-        <h3>You should have a hassle-free API into your own data.</h3>
-        <p class="f5 lh-copy measure">
-          With Cadence, there's no need to include messy, meta-programmed SQL in your analysis scripts. Cadence lets you define SQL <b>hooks</b> for a specific job's data results, allowing you to write your query once and abstract it away, simplifying the process of pulling into your analysis environment and facilitating communication across your team. You can pull your data into your desired analysis environment with the hook you defined simply by hitting an API endpoint. Cadence even allows you to parametrize hooks for greater flexibility.
-        </p>
-      </div>
-    </article>
+          //Scrolling
+          css3: true,
+          scrollingSpeed: 700,
+          autoScrolling: true,
+          fitToSection: true,
+          fitToSectionDelay: 1000,
+          scrollBar: false,
+          easing: 'easeInOutCubic',
+          easingcss3: 'ease',
+          loopBottom: false,
+          loopTop: false,
+          loopHorizontal: true,
+          continuousVertical: false,
+          continuousHorizontal: false,
+          scrollHorizontally: false,
+          interlockedSlides: false,
+          dragAndMove: false,
+          offsetSections: false,
+          resetSliders: false,
+          fadingEffect: false,
+          //normalScrollElements: '#element1, .element2',
+          scrollOverflow: false,
+          scrollOverflowReset: false,
+          scrollOverflowOptions: null,
+          touchSensitivity: 15,
+          normalScrollElementTouchThreshold: 5,
+          bigSectionsDestination: null,
+
+          //Accessibility
+          keyboardScrolling: true,
+          animateAnchor: true,
+          recordHistory: true,
+
+          //Design
+          //controlArrows: true,
+          //verticalCentered: true,
+          //sectionsColor : ['#ccc', '#fff'],
+          //paddingTop: '3em',
+          paddingBottom: '10px',
+          fixedElements: '#header',
+          responsiveWidth: 0,
+          responsiveHeight: 0,
+          responsiveSlides: true,
+          parallax: true,
+          parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},
+
+          //Custom selectors
+          sectionSelector: '.section',
+          slideSelector: '.slide',
+
+          lazyLoading: true,
+
+          //events
+          onLeave: function(index, nextIndex, direction){},
+          afterLoad: function(anchorLink, index){},
+          afterRender: function(){},
+          afterResize: function(){},
+          afterResponsive: function(isResponsive){},
+          afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
+          onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
+        });
+      });
+    </script>
+
+    <div id="fullpage">
+      <main class="section pa3 pa4-ns gray cover" style="background:url(image.jpg) no-repeat center;">
+         <h3 class="f-headline-ns f1-m f2 measure-narrow mv0 ttu tracked">Cadence</h3>
+          <h3 class="f2-ns f3-m f4 fw4 measure-narrow">
+            Let your data scientists do data science.
+          </h3>
+      </main>
+      <main class="section pa3 pa4-ns bg-yellow near-black">
+         <h3 class="f2-ns f3 measure-narrow">Data is hard.</h3>
+         <p class="f4-ns f5 lh-copy measure">
+  Working with a single dataset is non-trivial. You need to provision compute nodes, set up a database, and perform a data pull to write to that database — and that's before you even start thinking about opening a database connection, writing SQL, and pulling data into your preferred analysis environment.
+         </p>
+      </main>
+      <main class="section pa3 pa4-ns bg-light-red near-black">
+         <h3 class="f2-ns f3 measure-narrow">Dynamic, distributed data is harder.</h3>
+         <p class="f4-ns f5 lh-copy measure">
+  The complexity scales exponentially with multiple dynamic datasets, each of which must be periodically updated to reflect some data source. To handle this case, you need to manually or programmatically trigger data pulls to the appropriate database. Your use case might even involve joins or merges across multiple databases.
+         </p>
+      </main>
+      <main class="section pa3 pa4-ns bg-silver near-black">
+         <h3 class="f2-ns f3 measure-narrow">All your data ops should be in one place.</h3>
+         <p class="f4-ns f5 lh-copy measure">
+  Cadence is a hub for all your dynamic, distributed data operations. Write <b>kits</b> — abstract operations on your data in any language you choose — then schedule <b>jobs</b> in our intelligent DAG scheduler to be deployed to remote instances as you choose. No need to learn and configure Airflow or other complex scheduling packages.
+         </p>
+      </main>
+      <main class="section pa3 pa4-ns bg-gold near-black">
+         <h3 class="f2-ns f3 measure-narrow">Your tools should watch your back.</h3>
+         <p class="f4-ns f5 lh-copy measure">
+  Cadence can infer implicit dependencies across these jobs and intelligently modify your schedule to avoid potential data corruption and maximize throughput. Cadence learns your jobs' write patterns and can notify you of any potential data problems it detects. Monitor the health and activity of all of your jobs and data targets through Cadence's interface.
+         </p>
+      </main>
+      <main class="section pa3 pa4-ns bg-dark-green near-black">
+         <h3 class="f2-ns f3 measure-narrow">You should have a hassle-free API into your own data.</h3>
+         <p class="f4-ns f5 lh-copy measure">
+  With Cadence, there's no need to include messy, meta-programmed SQL in your analysis scripts. Cadence lets you define SQL <b>hooks</b> for a specific job's data results. You can pull your data into your desired analysis environment with the hook you defined simply by hitting an API endpoint. Cadence even allows you to parametrize hooks for greater flexibility.
+         </p>
+      </main>
+      <main class="section pa3 pa4-ns bg-near-black light-silver">
+         <h3 class="f2-ns f3 measure-narrow">Let's talk.</h3>
+         <p class="f4-ns f5 lh-copy measure">
+            Whether you just use data for business intelligence or data is your core competency, Cadence can save your business time and money.
+         </p>
+          <form class="" action="https://getsimpleform.com/messages?form_api_token=59a12ddee385c083d41bfdec7fceff49" method="POST" id="contactform">
+              <input type='hidden' name='redirect_to' value='http://cdnc.co' />
+              <fieldset class="cf bn ma0 pa0">
+                <div class="measure">
+                  <input class="f4 f3-l input-reset fl silver bg-near-black ph0 pv3 lh-solid w-100 bn" placeholder="Enter your email address..." type="text" name="email-address" value="" id="email-address">
+                  <input style="display: none;" type="submit" value="Sign up">
+                </div>
+              </fieldset>
+            </form>
+
+            <p class="f7 ttu tracked dark-gray">Copyright &copy; 2018 Cadence Data. All rights reserved.</p>
+      </main>
+    </div>
   </body>
 </html>
