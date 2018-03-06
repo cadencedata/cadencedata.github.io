@@ -15,15 +15,14 @@
         $('#fullpage').fullpage({
           //Navigation
           //menu: '#menu',
-          //lockAnchors: false,
-          //anchors:['firstPage', 'secondPage'],
+          //lockAnchors: true,
+          //anchors:['top', 'p2', 'p3', 'p4', 'p5', 'p6', 'contact'],
           navigation: false,
           //navigationPosition: 'right',
           //navigationTooltips: ['firstSlide', 'secondSlide'],
           //showActiveTooltip: false,
           //slidesNavigation: true,
           //slidesNavPosition: 'bottom',
-
           //Scrolling
           css3: true,
           scrollingSpeed: 700,
@@ -51,12 +50,10 @@
           touchSensitivity: 15,
           normalScrollElementTouchThreshold: 5,
           bigSectionsDestination: null,
-
           //Accessibility
           keyboardScrolling: true,
           animateAnchor: true,
           recordHistory: true,
-
           //Design
           //controlArrows: true,
           //verticalCentered: true,
@@ -66,16 +63,13 @@
           fixedElements: '#header',
           responsiveWidth: 0,
           responsiveHeight: 0,
-          responsiveSlides: true,
-          parallax: true,
-          parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},
-
+          //responsiveSlides: true,
+          //parallax: true,
+          //parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},
           //Custom selectors
           sectionSelector: '.section',
           slideSelector: '.slide',
-
           lazyLoading: true,
-
           //events
           onLeave: function(index, nextIndex, direction){},
           afterLoad: function(anchorLink, index){},
@@ -85,62 +79,104 @@
           afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
           onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
         });
+
+      $('.scrollDown').click(function(e){
+        e.preventDefault();
+        $.fn.fullpage.moveSectionDown();
       });
+
+      $('#moveToContact').click(function(e){
+        e.preventDefault();
+        $.fn.fullpage.moveTo(7);
+      });
+
+    
+    });
+    
     </script>
 
     <div id="fullpage">
-      <main class="section pa3 pa4-ns bg-lightest-blue near-black cover">
-         <h3 class="f-headline-ns f1-m f2 measure-narrow avenir mv0">Cadence</h3>
+      <main id="top" class="section pa3 pa4-ns cover bg-yellow near-black">
+        <div class="measure-wide pa3 pa4-ns">
+         <h3 class="f-headline-ns f1-m f2 measure-narrow avenir mb0 mt4">Cadence.</h3>
           <h3 class="f2-ns f3-m f4 fw4 measure-narrow">
             Let your data scientists do data science.
           </h3>
+          <a class="scrollDown fw5 ph3 pv2 input-reset near-black ttu tracked avenir ba bw1 b--near-black bg-transparent pointer f6 dim">Learn more</a>
+          <a id="moveToContact" class="fw5 ph3 pv2 input-reset near-black ttu tracked avenir ba bw1 b--near-black bg-transparent pointer f6 dim">Request a demo</a>
+        </div>
       </main>
-      <main class="section pa3 pa4-ns bg-yellow near-black">
+      <main id="p2" class="section pa3 pa4-ns cover bg-near-black" style="background:url(img2.jpeg) no-repeat center;">
+        <div class="measure-wide pa3 pa4-ns bg-light-yellow near-black" >
          <h3 class="f2-ns f3 measure-narrow avenir">Data is hard.</h3>
-         <p class="f4-ns f5 lh-copy measure">
+         <p class="f4-ns f5 lh-copy measure pb3">
   Working with a single dataset is non-trivial. You need to provision compute nodes, set up a database, and perform a data pull to write to that database — and that's before you even start thinking about opening a database connection, writing SQL, and pulling data into your preferred analysis environment.
          </p>
+         
+       </div>
       </main>
-      <main class="section pa3 pa4-ns bg-light-red near-black">
+      <main id="p3" class="section pa3 pa4-ns cover bg-near-black" style="background:url(img3.jpeg) no-repeat center;">
+        <div class="measure-wide pa3 pa4-ns bg-light-red near-black" >
          <h3 class="f2-ns f3 measure-narrow avenir">Dynamic, distributed data is harder.</h3>
-         <p class="f4-ns f5 lh-copy measure">
+         <p class="f4-ns f5 lh-copy measure pb3">
   The complexity scales exponentially with multiple dynamic datasets, each of which must be periodically updated to reflect some data source. To handle this case, you need to manually or programmatically trigger data pulls to the appropriate database. Your use case might even involve joins or merges across multiple databases.
          </p>
+         
+       </div>
       </main>
-      <main class="section pa3 pa4-ns bg-washed-blue near-black">
+      <main id="p4" class="section pa3 pa4-ns cover bg-near-black" style="background:url(img4.jpeg) no-repeat center;">
+        <div class="measure-wide pa3 pa4-ns bg-gold near-black" >
          <h3 class="f2-ns f3 measure-narrow avenir">Build models, not infrastructure.</h3>
-         <p class="f4-ns f5 lh-copy measure">
+         <p class="f4-ns f5 lh-copy measure pb3">
   Cadence is a hub for all your dynamic, distributed data operations. Write <b>kits</b> &mdash; abstract operations on your data in any language you choose &mdash; then schedule <b>jobs</b> in our intelligent DAG scheduler to be deployed to remote instances as you choose. No need to learn and configure Airflow or other complex scheduling packages.
          </p>
+         
+       </div>
       </main>
-      <main class="section pa3 pa4-ns bg-light-green near-black">
+      <main id="p5" class="section pa3 pa4-ns cover bg-near-black" style="background:url(img5.jpeg) no-repeat center;">
+        <div class="measure-wide pa3 pa4-ns bg-dark-green near-black" >
          <h3 class="f2-ns f3 measure-narrow avenir">Choose tools that watch your back.</h3>
-         <p class="f4-ns f5 lh-copy measure">
+         <p class="f4-ns f5 lh-copy measure pb3">
   Cadence can infer implicit dependencies across these jobs and intelligently modify your schedule to avoid potential data corruption and maximize throughput. Cadence learns your jobs' write patterns and can notify you of any potential data problems it detects. Monitor the health and activity of all of your jobs and data targets through Cadence's interface.
          </p>
+         
+       </div>
       </main>
-      <main class="section pa3 pa4-ns bg-gold near-black">
+      <main id="p6" class="section pa3 pa4-ns cover bg-near-black" style="background:url(img6.jpeg) no-repeat center;">
+        <div class="measure-wide pa3 pa4-ns bg-washed-red near-black" >
          <h3 class="f2-ns f3 measure-narrow avenir">Get a hassle-free API into your own data.</h3>
-         <p class="f4-ns f5 lh-copy measure">
+         <p class="f4-ns f5 lh-copy measure pb3">
   With Cadence, there's no need to include messy, meta-programmed SQL in your analysis scripts. Cadence lets you define SQL <b>hooks</b> for a specific job's data results. You can pull your data into your desired analysis environment with the hook you defined simply by hitting an API endpoint. Cadence even allows you to parametrize hooks for greater flexibility.
          </p>
+         
+       </div>
       </main>
-      <main class="section pa3 pa4-ns bg-near-white near-black">
+      <main id="contact" class="section pa3 pa4-ns cover bg-yellow near-black">
+        
          <h3 class="f2-ns f3 measure-narrow avenir">Let's talk.</h3>
-         <p class="f4-ns f5 lh-copy measure">
+         <p class="f4-ns f5 lh-copy measure pb3">
             Whether you just use data for business intelligence or data is your core competency, Cadence can save your business time and money.
          </p>
-          <form class="" action="https://getsimpleform.com/messages?form_api_token=59a12ddee385c083d41bfdec7fceff49" method="POST" id="contactform">
+         <style type="text/css">
+          ::placeholder {
+            color: #444;
+            font-style: italic;
+          }
+         </style>
+          <form class="" id="contactform" action="https://getsimpleform.com/messages?form_api_token=59a12ddee385c083d41bfdec7fceff49" method="POST" id="contactform">
               <input type='hidden' name='redirect_to' value='http://cdnc.co' />
               <fieldset class="cf bn ma0 pa0">
                 <div class="measure">
-                  <input class="f4 f3-l input-reset fl near-black bg-near-white ph0 pv3 lh-solid w-100 bn georgia " placeholder="Enter your email address..." type="text" name="email-address" value="" id="email-address">
-                  <input style="display: none;" type="submit" value="Sign up">
+                  <input class="f4 f3-l input-reset fl near-black bg-yellow ph0 pv3 lh-solid w-100 bn georgia " placeholder="Your name" type="text" name="your-name" value="" id="your-name">
+                  <input class="f4 f3-l input-reset fl near-black bg-yellow ph0 pv3 lh-solid w-100 bn georgia " placeholder="Email address" type="email" name="email-address" value="" id="email-address">
+                  <input class="f4 f3-l input-reset fl near-black bg-yellow ph0 pv3 lh-solid w-100 bn georgia " placeholder="Company name" type="text" name="company-name" value="" id="company-name">
+                  <textarea class="f4 f3-l input-reset fl near-black bg-yellow ph0 pv3 lh-solid w-100 bn georgia" name="message" id="message" form="contactform" placeholder="Message (optional)"></textarea>
+                  <input class="fw5 ph3 pv2 mv2 input-reset near-black ttu tracked avenir ba bw1 b--near-black bg-transparent pointer f6" type="submit" value="Sign Up">
                 </div>
               </fieldset>
             </form>
-
-            <p class="f7 ttu tracked dark-gray"><br/><br/>Copyright &copy; 2018 Cadence Data. All rights reserved.</p>
+        
+            <p class="f7 ttu tracked black avenir"><br/><br/>Copyright &copy; 2018 Cadence Data. All rights reserved.</p>
       </main>
       </div>
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -149,7 +185,6 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'UA-115153817-1');
   </script>
   </body>
