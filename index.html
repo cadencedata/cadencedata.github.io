@@ -11,6 +11,7 @@
   </head>
   <body class="georgia">
     <script type="text/javascript">
+
       $(document).ready(function() {
         $('#fullpage').fullpage({
           //Navigation
@@ -89,22 +90,19 @@
         e.preventDefault();
         $.fn.fullpage.moveTo(7);
       });
-
-    
-    });
-    
+      });
     </script>
 
     <div id="fullpage">
       <main id="top" class="section pa3 pa4-ns cover bg-yellow near-black">
         <div class="measure-wide pa3 pa4-ns">
-         <h3 class="f-headline-ns f1-m f2 measure-narrow avenir mb0 mt4">Cadence.</h3>
+         <h3 class="f-headline-ns f1-m f2 measure-narrow avenir mb0 mt4">Cadence</h3>
           <h3 class="f2-ns f3-m f4 fw4 measure-narrow">
             Let your data scientists do data science.
           </h3>
           <div>
-            <a class="scrollDown dib fw5 ph3 pv2 link near-black ttu tracked avenir ba bw1 b--near-black bg-transparent pointer f6 dim">Learn more</a>
-            <a id="moveToContact" class="mt2 mt0-ns dib fw5 ph3 pv2 link near-black ttu tracked avenir ba bw1 b--near-black bg-transparent pointer f6 dim">Request a demo</a>
+            <a class="scrollDown fw5 ph3 pv2 link near-black ttu tracked avenir ba bw1 b--near-black bg-transparent pointer f6 dim">Learn more</a>
+            <a id="moveToContact" class="fw5 ph3 pv2 link near-black ttu tracked avenir ba bw1 b--near-black bg-transparent pointer f6 dim">Request a demo</a>
           </div>
         </div>
       </main>
@@ -155,10 +153,11 @@
       </main>
       <main id="contact" class="section pa3 pa4-ns cover bg-yellow near-black">
         
-         <h3 class="f2-ns f3 measure-narrow avenir">Let's talk.</h3>
-         <p class="f4-ns f5 lh-copy measure pb3">
+         <h3 class="f2-ns f3 measure-narrow avenir">Interested? Let's talk.</h3>
+         <p class="f4-ns f5 lh-copy measure">
             Whether you just use data for business intelligence or data is your core competency, Cadence can save your business time and money.
          </p>
+         <p class="f7 lh-copy pb3 ttu tracked black avenir">Your information is for internal use only and will never be shared. </p>
          <style type="text/css">
           ::placeholder {
             color: #444;
@@ -172,8 +171,8 @@
                   <input class="f5 f3-l input-reset fl near-black bg-yellow ph0 pv3 lh-solid w-100 bn georgia " placeholder="Your name" type="text" name="your-name" value="" id="your-name">
                   <input class="f5 f3-l input-reset fl near-black bg-yellow ph0 pv3 lh-solid w-100 bn georgia " placeholder="Email address" type="email" name="email-address" value="" id="email-address">
                   <input class="f5 f3-l input-reset fl near-black bg-yellow ph0 pv3 lh-solid w-100 bn georgia " placeholder="Company name" type="text" name="company-name" value="" id="company-name">
-                  <textarea class="f4 f3-l input-reset fl near-black bg-yellow ph0 pv3 lh-solid w-100 bn georgia" name="message" id="message" form="contactform" placeholder="Message (optional)"></textarea>
-                  <input class="fw5 ph3 pv2 mv2 input-reset near-black ttu tracked avenir ba bw1 b--near-black bg-transparent pointer f6" type="submit" value="Sign Up">
+                  <textarea class="f5 f3-l input-reset fl near-black bg-yellow ph0 pv3 lh-solid w-100 bn georgia" name="message" id="message" form="contactform" placeholder="Message (optional)"></textarea>
+                  <input class="fw5 ph3 pv2 mv2 input-reset near-black ttu tracked avenir ba bw1 b--near-black bg-transparent pointer f6 dim" type="submit" value="Get in touch">
                 </div>
               </fieldset>
             </form>
