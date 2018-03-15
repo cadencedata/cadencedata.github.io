@@ -4,6 +4,7 @@
 		<title>Cadence</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="tachyons.min.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	</head>
 	<body class="georgia">
 		<main class="pa3 pa4-ns cover bg-yellow black-80 vh-100">
@@ -47,7 +48,7 @@
 				</div>
 			</div>
 		</main>
-		<main class="cf ph3 ph5-ns pb5 bg-light-blue black-70">
+		<main class="cf ph3 ph5-ns pb5 bg-light-blue black-70"><a id="workflow" name="workflow"></a>
 			<div class="mw9 center">
 				<h1 class="fl w-100 mt5 f5 ttu tracked fw6 avenir">Workflow</h1>
 				<article class="pv2 fl w-100 ">
@@ -74,7 +75,7 @@
 					</article>
 					<article class="pv2 fl w-100 w-50-l pr0 pr2-l">
 						<h2 class="f4 f2-ns fw6 mb2 avenir"><span class="black-30">4</span>&nbsp;Monitor results</h2>
-						<p class="f5 measure lh-copy mt0">As your jobs are run, the Cadence dashboard displays the health of each of your jobs. The dashboard shows the output your jobs produce to enable easy debugging. Additionally, Cadence can notify you of subler data errors based on that job's previous activity.
+						<p class="f5 measure lh-copy mt0">As your jobs are run, the Cadence dashboard displays the health of each of your jobs. The dashboard shows the output your jobs produce to enable easy debugging. Additionally, Cadence can notify you of subtler data errors based on that job's previous activity.
 						</p>
 					</article>
 				</div>
@@ -165,6 +166,44 @@
 				</div>
 			</div>
 		</main>
+		<script type="text/javascript">
+			// Select all links with hashes
+			$('a[href*="#"]')
+			  // Remove links that don't actually link to anything
+			  .not('[href="#"]')
+			  .not('[href="#0"]')
+			  .click(function(event) {
+			    // On-page links
+			    if (
+			      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+			      && 
+			      location.hostname == this.hostname
+			    ) {
+			      // Figure out element to scroll to
+			      var target = $(this.hash);
+			      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+			      // Does a scroll target exist?
+			      if (target.length) {
+			        // Only prevent default if animation is actually gonna happen
+			        event.preventDefault();
+			        $('html, body').animate({
+			          scrollTop: target.offset().top
+			        }, 1000, function() {
+			          // Callback after animation
+			          // Must change focus!
+			          var $target = $(target);
+			          $target.focus();
+			          if ($target.is(":focus")) { // Checking if the target was focused
+			            return false;
+			          } else {
+			            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+			            $target.focus(); // Set focus again
+			          };
+			        });
+			      }
+			    }
+			  });
+		</script>
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115153817-1"></script>
 		<script>
