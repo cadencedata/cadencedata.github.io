@@ -1,199 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Cadence</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/jquery.fullpage.min.css" />
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/jquery.fullpage.min.js"></script>
-
-  </head>
-  <body class="georgia">
-    <script type="text/javascript">
-
-      $(document).ready(function() {
-        $('#fullpage').fullpage({
-          //Navigation
-          //menu: '#menu',
-          //lockAnchors: true,
-          //anchors:['top', 'p2', 'p3', 'p4', 'p5', 'p6', 'contact'],
-          navigation: false,
-          //navigationPosition: 'right',
-          //navigationTooltips: ['firstSlide', 'secondSlide'],
-          //showActiveTooltip: false,
-          //slidesNavigation: true,
-          //slidesNavPosition: 'bottom',
-          //Scrolling
-          css3: true,
-          scrollingSpeed: 700,
-          autoScrolling: true,
-          fitToSection: true,
-          fitToSectionDelay: 1000,
-          scrollBar: true,
-          easing: 'easeInOutCubic',
-          easingcss3: 'ease',
-          loopBottom: false,
-          loopTop: false,
-          loopHorizontal: true,
-          continuousVertical: false,
-          continuousHorizontal: false,
-          scrollHorizontally: false,
-          interlockedSlides: false,
-          dragAndMove: false,
-          offsetSections: false,
-          resetSliders: false,
-          fadingEffect: false,
-          //normalScrollElements: '#element1, .element2',
-          scrollOverflow: false,
-          scrollOverflowReset: false,
-          scrollOverflowOptions: null,
-          touchSensitivity: 15,
-          normalScrollElementTouchThreshold: 5,
-          bigSectionsDestination: null,
-          //Accessibility
-          keyboardScrolling: true,
-          animateAnchor: true,
-          recordHistory: true,
-          //Design
-          //controlArrows: true,
-          //verticalCentered: true,
-          //sectionsColor : ['#ccc', '#fff'],
-          //paddingTop: '3em',
-          paddingBottom: '10px',
-          fixedElements: '#header',
-          responsiveWidth: 0,
-          responsiveHeight: 0,
-          //responsiveSlides: true,
-          //parallax: true,
-          //parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},
-          //Custom selectors
-          sectionSelector: '.section',
-          slideSelector: '.slide',
-          lazyLoading: true,
-          //events
-          onLeave: function(index, nextIndex, direction){},
-          afterLoad: function(anchorLink, index){},
-          afterRender: function(){},
-          afterResize: function(){},
-          afterResponsive: function(isResponsive){},
-          afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
-          onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
-        });
-
-      $('.scrollDown').click(function(e){
-        e.preventDefault();
-        $.fn.fullpage.moveSectionDown();
-      });
-
-      $('#moveToContact').click(function(e){
-        e.preventDefault();
-        $.fn.fullpage.moveTo(7);
-      });
-      });
-    </script>
-
-    <div id="fullpage">
-      <main id="top" class="section pa3 pa4-ns cover bg-yellow near-black">
-        <div class="measure-wide pa3 pa4-ns">
-         <h3 class="f-headline-ns f1-m f2 measure-narrow avenir mb0 mt4">Cadence</h3>
-          <h3 class="f2-ns f3-m f4 fw4 measure-narrow">
-            Let your data scientists do data science.
-          </h3>
-          <div>
-            <a class="scrollDown fw5 ph3 pv2 link near-black ttu tracked avenir ba bw1 b--near-black bg-transparent pointer f6 dim dib">Learn more</a>
-            <a id="moveToContact" class="mt1 fw5 ph3 pv2 link near-black ttu tracked avenir ba bw1 b--near-black bg-transparent pointer f6 dim dib">Request a demo</a>
-          </div>
-        </div>
-      </main>
-      <main id="p2" class="section pa3 pa4-ns cover bg-near-black" style="background:url(img2.jpeg) no-repeat center;">
-        <div class="measure-wide pa3 pa4-ns bg-light-yellow near-black" >
-         <h3 class="f2-ns f3 measure-narrow avenir">Data is hard.</h3>
-         <p class="f4-ns f5 lh-copy measure pb3">
-  Working with a single dataset is non-trivial. You need to provision compute nodes, set up a database, and perform a data pull to write to that database — and that's before you even start thinking about opening a database connection, writing SQL, and pulling data into your preferred analysis environment.
-         </p>
-         
-       </div>
-      </main>
-      <main id="p3" class="section pa3 pa4-ns cover bg-near-black" style="background:url(img3.jpeg) no-repeat center;">
-        <div class="measure-wide pa3 pa4-ns bg-light-red near-black" >
-         <h3 class="f2-ns f3 measure-narrow avenir">Dynamic, distributed data is harder.</h3>
-         <p class="f4-ns f5 lh-copy measure pb3">
-  The complexity scales exponentially with multiple dynamic datasets, each of which must be periodically updated to reflect some data source. To handle this case, you need to manually or programmatically trigger data pulls to the appropriate database. Your use case might even involve joins or merges across multiple databases.
-         </p>
-         
-       </div>
-      </main>
-      <main id="p4" class="section pa3 pa4-ns cover bg-near-black" style="background:url(img4.jpeg) no-repeat center;">
-        <div class="measure-wide pa3 pa4-ns bg-gold near-black" >
-         <h3 class="f2-ns f3 measure-narrow avenir">Build models, not infrastructure.</h3>
-         <p class="f4-ns f5 lh-copy measure pb3">
-  Cadence is a hub for all your dynamic, distributed data operations. Write <b>kits</b> &mdash; abstract operations on your data in any language you choose &mdash; then schedule <b>jobs</b> in our intelligent DAG scheduler to be deployed to remote instances as you choose. No need to learn and configure Airflow or other complex scheduling packages.
-         </p>
-         
-       </div>
-      </main>
-      <main id="p5" class="section pa3 pa4-ns cover bg-near-black" style="background:url(img5.jpeg) no-repeat center;">
-        <div class="measure-wide pa3 pa4-ns bg-dark-green near-black" >
-         <h3 class="f2-ns f3 measure-narrow avenir">Choose tools that watch your back.</h3>
-         <p class="f4-ns f5 lh-copy measure pb3">
-  Cadence can infer implicit dependencies across these jobs and intelligently modify your schedule to avoid potential data corruption and maximize throughput. Cadence learns your jobs' write patterns and can notify you of any potential data problems it detects. Monitor the health and activity of all of your jobs and data targets through Cadence's interface.
-         </p>
-         
-       </div>
-      </main>
-      <main id="p6" class="section pa3 pa4-ns cover bg-near-black" style="background:url(img6.jpeg) no-repeat center;">
-        <div class="measure-wide pa3 pa4-ns bg-washed-red near-black" >
-         <h3 class="f2-ns f3 measure-narrow avenir">Get a hassle-free API into your own data.</h3>
-         <p class="f4-ns f5 lh-copy measure pb3">
-  With Cadence, there's no need to include messy, meta-programmed SQL in your analysis scripts. Cadence lets you define SQL <b>hooks</b> for a specific job's data results. You can pull your data into your desired analysis environment with the hook you defined simply by hitting an API endpoint. Cadence even allows you to parametrize hooks for greater flexibility.
-         </p>
-         
-       </div>
-      </main>
-      <main id="contact" class="section pa3 pa4-ns cover bg-yellow near-black">
-        
-         <h3 class="f2-ns f3 measure-narrow avenir">Interested? Let's talk.</h3>
-         <p class="f4-ns f5 lh-copy measure">
-            Whether you just use data for business intelligence or data is your core competency, Cadence can save your business time and money.
-         </p>
-         <p class="f7 lh-copy pb3 ttu tracked black avenir">Your information is for internal use only and will never be shared. </p>
-         <style type="text/css">
-          ::placeholder {
-            color: #444;
-            font-style: italic;
-          }
-         </style>
-          <form class="" id="contactform" action="https://getsimpleform.com/messages?form_api_token=59a12ddee385c083d41bfdec7fceff49" method="POST" id="contactform">
-              <input type='hidden' name='redirect_to' value='http://cdnc.co' />
-              <fieldset class="cf bn ma0 pa0">
-                <div class="measure">
-                  <input class="f5 f3-l input-reset fl near-black bg-yellow ph0 pv3 lh-solid w-100 bn georgia " placeholder="Your name" type="text" name="your-name" value="" id="your-name">
-                  <input class="f5 f3-l input-reset fl near-black bg-yellow ph0 pv3 lh-solid w-100 bn georgia " placeholder="Email address" type="email" name="email-address" value="" id="email-address">
-                  <input class="f5 f3-l input-reset fl near-black bg-yellow ph0 pv3 lh-solid w-100 bn georgia " placeholder="Company name" type="text" name="company-name" value="" id="company-name">
-                  <textarea class="f5 f3-l input-reset fl near-black bg-yellow ph0 pv3 lh-solid w-100 bn georgia" name="message" id="message" form="contactform" placeholder="Message (optional)"></textarea>
-                  <input class="fw5 ph3 pv2 mv2 input-reset near-black ttu tracked avenir ba bw1 b--near-black bg-transparent pointer f6 dim" type="submit" value="Get in touch">
-                </div>
-              </fieldset>
-            </form>
-        <p class="f7 ttu tracked black avenir"><br/><br/>Copyright &copy; 2018 Cadence Data. All rights reserved.</p>
-            
-      </main>
-        
-      </footer>
-
-
-
-
-
-      </div>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115153817-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'UA-115153817-1');
-  </script>
-  </body>
+	<head>
+		<title>Cadence</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="tachyons.min.css">
+	</head>
+	<body class="georgia">
+		<main class="pa3 pa4-ns cover bg-yellow black-80 vh-100">
+			<div class="measure-wide pa3 pa4-ns mt7 v-mid">
+				<h3 class="f-headline-ns f1-m f2 measure-wide avenir mb0 mt4">Cadence</h3>
+				<h3 class="f2-ns f3-m f4 fw4 measure-wide">Let your data scientists do data science.</h3>
+				<div>
+					<a class="fw5 ph3 pv2 link ttu tracked avenir ba bw1 b--black-70 bg-transparent pointer f6 dim dib">Learn more</a>
+					<a class="mt1 fw5 ph3 pv2 link ttu tracked avenir ba bw1 b--black-70 bg-transparent pointer f6 dim dib">Request a demo</a>
+				</div>
+			</div>
+		</main>
+		<main class="cf ph3 ph5-ns pb5 bg-light-green black-70">
+			<div class="mw9 center">
+				<h1 class="fl w-100 mt5 f5 ttu tracked fw6 avenir">Features</h1>
+				<article class="pv2 fl w-100 ">
+					<h2 class="f4 f1-ns fw6 mb2 avenir">Make your data work for you &mdash; not vice versa.</h2>
+					<p class="f5 f4-ns measure lh-copy mt0">How do you handle constantly-changing data sources writing to different database nodes? <a class="link hover-black black-70 underline" href="#">Use Cadence to safely schedule and reliably perform</a> your data pulls and ETL operations.</p>
+				</article>
+				<div class="cf">
+					<article class="pv2 fl w-100 w-50-l pr0 pr2-l">
+						<h2 class="f4 f2-ns fw6 mb2 avenir">Job scheduling</h2>
+						<p class="f5 measure lh-copy mt0"> Use Cadence's intuitive scheduling interface to quickly set up complex triggers for your data operations. No need to learn and configure Airflow or other complicated scheduling packages. Cadence can intelligently modify your schedule to avoid data corruption and maximize throughput.
+						</p>
+					</article>
+					<article class="pv2 fl w-100 w-50-l pl0 pl2-l">
+						<h2 class="f4 f2-ns fw6 mb2 avenir">Distributed execution</h2>
+						<p class="f5 measure lh-copy mt0">Choose which hardware you want each job to run on &mdash; Cadence will spin up the machine of your choice, load your supporting libraries, execute your job, and clean up afterwards.
+						</p>
+					</article>
+				</div>
+				<div class="cf">
+					<article class="pv2 fl w-100 w-50-l pr0 pr2-l">
+						<h2 class="f4 f2-ns fw6 mb2 avenir">Monitoring</h2>
+						<p class="f5 measure lh-copy mt0">Track the health of your jobs &mdash; if they're failing, Cadence provides error logs to help you debug quickly. If asked, Cadence will learn your jobs' write patterns and can notify you of subtle data errors that might not otherwise raise execution errors.</p>
+					</article>
+					<article class="pv2 fl w-100 w-50-l pl0 pl2-l">
+						<h2 class="f4 f2-ns fw6 mb2 avenir">Hooks</h2>
+						<p class="f5 measure lh-copy mt0">Cadence lets you define SQL hooks into your data targets. You can pull your data into your desired analysis environment with the hook you defined simply by hitting an API endpoint. Cadence even allows you to parametrize hooks for greater flexibility.</p>
+					</article>
+				</div>
+			</div>
+		</main>
+		<main class="cf ph3 ph5-ns pb5 bg-light-blue black-70">
+			<div class="mw9 center">
+				<h1 class="fl w-100 mt5 f5 ttu tracked fw6 avenir">Workflow</h1>
+				<article class="pv2 fl w-100 ">
+					<h2 class="f4 f1-ns fw6 mb2 avenir">Build models, not infrastructure.</h2>
+					<p class="f5 f4-ns measure lh-copy mt0">Don't waste your data science team's time &mdash; let us <a class="link hover-black black-70 underline" href="#">turn months of engineering into an afternoon's project</a>.</p>
+				</article>
+				<div class="cf">
+					<article class="pv2 fl w-100 w-50-l pr0 pr2-l">
+						<h2 class="f4 f2-ns fw6 mb2 avenir"><span class="black-30">1</span>&nbsp;Register data targets</h2>
+						<p class="f5 measure lh-copy mt0">Register the database nodes and database tables (data targets) that your jobs will operate on. In most cases, this is as easy as providing a connection string.
+						</p>
+					</article>
+					<article class="pv2 fl w-100 w-50-l pr0 pr2-l">
+						<h2 class="f4 f2-ns fw6 mb2 avenir"><span class="black-30">2</span>&nbsp;Upload kits</h2>
+						<p class="f5 measure lh-copy mt0">A kit is a zipped folder containing your data operations code and any necessary supporting libraries. Upload your kits through the Cadence interface.
+						</p>
+					</article>
+				</div>
+				<div class="cf">
+					<article class="pv2 fl w-100 w-50-l pr0 pr2-l">
+						<h2 class="f4 f2-ns fw6 mb2 avenir"><span class="black-30">3</span>&nbsp;Schedule jobs</h2>
+						<p class="f5 measure lh-copy mt0">Once you have kits, define and schedule jobs to execute your code. To create a job, you supply a <span class="code">cdnc.sh</span> file, the schedule to run the job, and the hardware that should be provisioned. You can also specify inter-job dependencies and enable advanced health checks.
+						</p>
+					</article>
+					<article class="pv2 fl w-100 w-50-l pr0 pr2-l">
+						<h2 class="f4 f2-ns fw6 mb2 avenir"><span class="black-30">4</span>&nbsp;Monitor results</h2>
+						<p class="f5 measure lh-copy mt0">As your jobs are run, the Cadence dashboard displays the health of each of your jobs. The dashboard shows the output your jobs produce to enable easy debugging. Additionally, Cadence can notify you of subler data errors based on that job's previous activity.
+						</p>
+					</article>
+				</div>
+				<div class="cf">
+					<article class="pv2 fl w-100 w-50-l pr0 pr2-l">
+						<h2 class="f4 f2-ns fw6 mb2 avenir"><span class="black-30">5</span>&nbsp;Define hooks</h2>
+						<p class="f5 measure lh-copy mt0">Through the Cadence interface, provide a SQL snippet that acts on a certain target, and we'll give you an API endpoint to return the result of that query as a CSV or JSON file. This step is optional -- you can directly query your data targets with SQL, of course.
+						</p>
+					</article>
+					<article class="pv2 fl w-100 w-50-l pr0 pr2-l">
+						<h2 class="f4 f2-ns fw6 mb2 avenir"><span class="black-30">6</span>&nbsp;Build models</h2>
+						<p class="f5 measure lh-copy mt0">Congratulations! You can now query your data targets with your hooks or directly in SQL. Relax &mdash; your data scientists can take it from here :-)
+						</p>
+					</article>
+				</div>
+			</div>
+		</main>
+		<main class="cf ph3 ph5-ns pb5 bg-light-pink black-70">
+			<div class="mw9 center">
+				<h1 class="fl w-100 mt5 f5 ttu tracked fw6 avenir">Security</h1>
+				<article class="pv2 fl w-100 ">
+					<h2 class="f4 f1-ns fw6 mb2 avenir">Choose tools that watch your back.</h2>
+					<p class="f5 f4-ns measure lh-copy mt0">Fine-tune Cadence's access level to each of your data targets. Your data is always stored on your own instances, and all your sensitive metadata that we're required to store is encrypted.</p>
+				</article>
+				<div class="cf">
+					<article class="pv2 fl w-100 w-50-l pr0 pr2-l">
+						<h2 class="f4 f2-ns fw6 mb2 avenir">Safety</h2>
+							<ul class="list pl0 measure">
+								<li class="lh-copy pv3 ba bl-0 bt-0 br-0 b--dotted b--black-30">Implicit dependency inference prevents concurrent writes</li>
+								<li class="lh-copy pv3 ba bl-0 bt-0 br-0 b--dotted b--black-30">Intelligent monitoring discovers abnormal events</li>
+								<li class="lh-copy pv3 ba bl-0 bt-0 br-0 b--dotted b--black-30">Dependency cascade halts execution to avoid data corruption</li>
+							</ul>
+					</article>
+					<article class="pv2 fl w-100 w-50-l pr0 pr2-l">
+						<h2 class="f4 f2-ns fw6 mb2 avenir">Privacy</h2>
+							<ul class="list pl0 measure">
+								<li class="lh-copy pv3 ba bl-0 bt-0 br-0 b--dotted b--black-30">Data is always stored on your own instances</li>
+								<li class="lh-copy pv3 ba bl-0 bt-0 br-0 b--dotted b--black-30">Access credentials are encrypted on our servers</li>
+								<li class="lh-copy pv3 ba bl-0 bt-0 br-0 b--dotted b--black-30">Job environment variables can be encrypted</li>
+							</ul>
+					</article>
+				</div>
+			</div>
+		</main>
+		<main class="cf ph3 ph5-ns pb5 bg-light-yellow black-70">
+			<div class="mw9 center">
+				<h1 class="fl w-100 mt5 f5 ttu tracked fw6 avenir">Get in touch</h1>
+				<article class="pv2 fl w-100 ">
+					<h2 class="f4 f1-ns fw6 mb2 avenir">Interested? Let's talk.</h2>
+					<p class="f5 f4-ns measure lh-copy mt0">Whether you just use data for business intelligence or data is your core competency, Cadence can save your business time and money. All inquiries are strictly confidential.</p>
+				</article>
+				<div class="cf">
+					<article class="pv2 fl w-100 pr0 pr2-l">
+						<style type="text/css">
+							::placeholder {
+								color: #444;
+								font-style: italic;
+							}
+						</style>
+						<form class="" id="contactform" action="https://getsimpleform.com/messages?form_api_token=59a12ddee385c083d41bfdec7fceff49" method="POST">
+							<input type="hidden" name="redirect_to" value="http://cdnc.co">
+							<fieldset class="cf bn ma0 pa0">
+								<div class="measure">
+									<input class="f5 f4-l input-reset fl near-black bg-light-yellow ph0 pv3 lh-solid w-100 bn georgia " placeholder="Your name" type="text" name="your-name" value="" id="your-name">
+									<input class="f5 f4-l input-reset fl near-black bg-light-yellow ph0 pv3 lh-solid w-100 bn georgia " placeholder="Email address" type="email" name="email-address" value="" id="email-address">
+									<input class="f5 f4-l input-reset fl near-black bg-light-yellow ph0 pv3 lh-solid w-100 bn georgia " placeholder="Company name" type="text" name="company-name" value="" light-yellow="company-name">
+									<textarea class="f5 f4-l input-reset fl near-black bg-light-yellow ph0 pv3 lh-solid w-100 bn georgia" name="message" id="message" form="contactform" placeholder="Message (optional)"></textarea>
+									<input class="black-70 fw5 ph3 pv2 link ttu tracked avenir ba bw1 b--black-70 bg-transparent pointer f6 dim dib" type="submit" value="Get in touch">
+								</div>
+							</fieldset>
+						</form>
+					</article>
+				</div>
+			</div>
+		</main>
+		<main class="cf ph3 ph5-ns pb5 bg-near-black white-20">
+			<div class="mw9 center">
+				<h1 class="fl w-100 mt5 f5 ttu tracked fw5 avenir">Miscellaneous</h1>
+				<div class="cf">
+					<article class="pv2 fl w-100 w-50-l pr0 pr2-l">
+						<p class="f6 f5-ns measure lh-copy mt0">Copyright &copy; 2018 Cadence Data. All rights reserved.</p>
+						<p class="f7 f6-ns measure lh-copy mt0">Any data you submit to us through the above form is for internal use only and will never be shared, released, or otherwise published withour your consent. Your inquiry is confidential.</p>
+					</article>
+					<article class="pv2 fl w-100 w-50-l pr0 pr2-l">
+						<p class="f6 f5-ns measure lh-copy mt0">Follow us on Twitter <a class="link hover-white-40 white-20" href="http://twitter.com/CadenceData">@CadenceData</a>.</p>
+						<p class="f7 f6-ns measure lh-copy mt0">We use cookies to personalize content and ads, to provide social media features and to analyse our traffic. We also share information about your use of our site with our social media, advertising and analytics partners who may combine it with other information you’ve provided to them or they’ve collected from your use of their services.</p>
+					</article>
+				</div>
+			</div>
+		</main>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115153817-1"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'UA-115153817-1');
+		</script>
+		<!-- End Google Analytics -->
+	</body>
 </html>
