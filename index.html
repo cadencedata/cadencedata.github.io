@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<!--[if lt IE 9 ]><html class="no-js oldie" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+
+    <!--- basic page needs
+   ================================================== -->
+    <meta charset="utf-8">
+    <title>Cadence</title>
+    <meta name="Let your data scientists do data science." content="">
+    <meta name="Cadence Data" content="">
+
+    <!-- mobile specific metas
+   ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+   ================================================== -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- script
+   ================================================== -->
+    <script src="js/modernizr.js"></script>
+    <script src="js/pace.min.js"></script>
+
+    <!-- favicons
+	================================================== -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+</head>
+
+<body id="top">
+
+    <!-- header
+   ================================================== -->
+   <header id="header" class="row">
+
+   		<div class="header-logo">
+	        <a href="index.html">Cadence</a>
+	    </div>
+
+	   	<nav id="header-nav-wrap">
+			<ul class="header-main-nav">
+				<li class="current"><a class="smoothscroll"  href="#home" title="home">Home</a></li>
+                <li><a class="smoothscroll"  href="#about" title="about">About</a></li>
+<!--
+        <li><a class="smoothscroll"  href="#pricing" title="pricing">Pricing</a></li>
+        <li><a class="smoothscroll"  href="#testimonials" title="testimonials">Testimonials</a></li>
+-->
+      </ul>
+
+            <a href="#download" title="contact-us-button" class="smoothscroll button button-primary cta">Contact Us</a>
+		</nav>
+
+		<a class="header-menu-toggle" href="#"><span>Menu</span></a>
+
+   </header> <!-- /header -->
+
+
+   <!-- home
+   ================================================== -->
+   <section id="home" data-parallax="scroll" data-image-src="images/hero-bg.jpg" data-natural-width=3000 data-natural-height=2000>
+
+        <div class="overlay"></div>
+        <div class="home-content">
+
+            <div class="row contents">
+                <div class="home-content-left">
+<!--
+                    <h3 data-aos="fade-up">Welcome to Cadence</h3>
+-->
+                    <h1 data-aos="fade-up">
+                        Let your data scientists do data science.
+                    </h1>
+
+                    <div class="buttons" data-aos="fade-up">
+                        <a href="#about" class="smoothscroll button stroke">
+                            <span class="icon-light-bulb" aria-hidden="true"></span>
+                            Learn more
+                        </a>
+                        <a href="#download" data-lity class="smoothscroll button stroke">
+                            <span class="icon-phone" aria-hidden="true"></span>
+                            Request a demo
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="home-image-right">
+                    <img src="images/iphone-app-470.png"
+                        srcset="images/iphone-app-470.png 1x, images/iphone-app-940.png 2x"
+                        data-aos="fade-up">
+                </div>
+            </div>
+
+        </div> <!-- end home-content -->
+
+        <ul class="home-social-list">
+            <li>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+            </li>
+        </ul>
+        <!-- end home-social-list -->
+
+        <div class="home-scrolldown">
+            <a href="#about" class="scroll-icon smoothscroll">
+                <span>Scroll Down</span>
+                <i class="icon-arrow-right" aria-hidden="true"></i>
+            </a>
+        </div>
+
+    </section> <!-- end home -->
+
+
+    <!-- about
+    ================================================== -->
+    <section id="about">
+
+        <div class="row about-intro">
+
+            <div class="col-four">
+                <h1 class="intro-header" data-aos="fade-up">Execute your data operations robustly, repeatably, and transparently.</h1>
+            </div>
+            <div class="col-eight">
+                <h3 class="lead" data-aos="fade-up">
+                  If your company is launching a data science initiative, you'll need to do more than just write your data operations.
+                </h3>
+                <p class="lead" data-aos="fade-up">
+                  You'll need to connect to different databases, pull new data at scheduled intervals, prevent overwrites, monitor the performance of your operations, and more. It might takes months to build those features into a robust and repeatable pipelined infrastructure - that's months of wasted time for your data scientists and engineers.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="row about-features">
+
+          <div></div>
+
+            <div class="features-list block-1-2 block-m-1-2 block-mob-full group">
+
+                <div class="bgrid feature" data-aos="fade-up">
+
+                    <span class="icon"><i class="icon-clock"></i></span>
+
+                    <div class="service-content">
+
+                        <h3>Job scheduling</h3>
+
+                        <p>
+                          Use Cadence's intuitive scheduling interface to craft complex execution pipelines. Cadence can intelligently modify your schedule to avoid data corruption and maximize throughput.
+                        </p>
+
+                    </div>
+
+                    </div> <!-- /bgrid -->
+
+                    <div class="bgrid feature" data-aos="fade-up">
+
+                        <span class="icon"><i class="icon-cloud"></i></span>
+
+                    <div class="service-content">
+                        <h3>Distributed execution</h3>
+
+                        <p>
+                          Choose which hardware you want each job to run on — Cadence will spin up the machine of your choice, load your supporting libraries, execute your job, and clean up afterwards.
+                        </p>
+
+
+                    </div>
+
+                </div> <!-- /bgrid -->
+
+                <div class="bgrid feature" data-aos="fade-up">
+
+                    <span class="icon"><i class="icon-glasses"></i></span>
+
+                    <div class="service-content">
+                        <h3>Monitoring</h3>
+
+                        <p>
+                          Track the health of your jobs — if they're failing, Cadence provides error logs to help you debug quickly. If asked, Cadence will learn your jobs' write patterns and can notify you of subtle data errors that might not otherwise raise execution errors.
+                        </p>
+
+                    </div>
+
+                </div> <!-- /bgrid -->
+
+                    <div class="bgrid feature" data-aos="fade-up">
+
+                        <span class="icon"><i class="icon-key"></i></span>
+
+                    <div class="service-content">
+                        <h3>Access control</h3>
+
+                        <p>Fine-tune Cadence's access level to each of your data targets. Your data is always stored on your own instances, and all your sensitive metadata that we're required to store is encrypted.
+                        </p>
+
+                    </div>
+
+                    </div> <!-- /bgrid -->
+
+
+
+            </div> <!-- end features-list -->
+
+        </div> <!-- end about-features -->
+
+        <div class="row about-how">
+
+            <h1 class="intro-header" data-aos="fade-up">Four steps to better data engineering.</h1>
+
+            <div class="about-how-content" data-aos="fade-up">
+                <div class="about-how-steps block-1-2 block-tab-full group">
+
+                    <div class="bgrid step" data-item="1">
+                        <h3>Register targets</h3>
+                        <p>Register the database nodes and database tables (data targets) that your jobs will operate on. In most cases, this is as easy as providing a connection string.
+                        </p>
+                    </div>
+
+                    <div class="bgrid step" data-item="2">
+                        <h3>Upload kits</h3>
+                        <p>A kit is a zipped folder containing your data operation's code and any necessary supporting libraries. Upload your kits through the Cadence interface.
+                        </p>
+                    </div>
+
+                    <div class="bgrid step" data-item="3">
+                        <h3>Schedule jobs</h3>
+                        <p>Once you have kits, define and schedule jobs to execute your code. To create a job, you supply a runner script, the schedule to run the job, and the hardware that should be provisioned. You can also specify inter-job dependencies and enable advanced health checks.
+                        </p>
+                    </div>
+
+                    <div class="bgrid step" data-item="4">
+                        <h3>Monitor results</h3>
+                        <p>As your jobs are run, the Cadence dashboard displays the health of each of your jobs. The dashboard shows the output your jobs produce to enable easy debugging. Additionally, Cadence can notify you of subtler data errors based on that job's previous activity.
+                        </p>
+                    </div>
+                    </div>
+
+                </div>
+           </div> <!-- end about-how-content -->
+
+        </div> <!-- end about-how -->
+
+
+
+    </section> <!-- end about -->
+
+    <!-- Contact Us
+    ================================================== -->
+    <section id="download">
+
+        <div class="row">
+            <div class="col-full">
+                <h1 class="intro-header"  data-aos="fade-up">Interested? Let's talk.</h1>
+
+                <p class="lead" data-aos="fade-up">
+                    Whether you just use data for business intelligence or data is your core competency, Cadence can save your business time and money.
+                </p>
+            </div>
+
+            <div class="">
+    					<article class="">
+    						<style type="">
+    							::placeholder {
+    								color: #b2fabc;
+    							}
+    						</style>
+    						<form class="" id="contactform" action="https://getsimpleform.com/messages?form_api_token=59a12ddee385c083d41bfdec7fceff49" method="POST">
+    							<input type="hidden" name="redirect_to" value="http://cdnc.co">
+    							<fieldset class="">
+    								<div class="">
+    									<input class="col-full" placeholder="Your name" type="text" name="your-name" value="" id="your-name">
+    									<input class="col-full" placeholder="Email address" type="email" name="email-address" value="" id="email-address">
+    									<input class="col-full" placeholder="Company name" type="text" name="company-name" value="" light-yellow="company-name">
+    									<textarea class="col-full" name="message" id="message" form="contactform" placeholder="Message (optional)"></textarea>
+    									<input class="col-full" type="submit" value="Get in touch">
+    								</div>
+    							</fieldset>
+    						</form>
+    					</article>
+				</div>
+
+        </div>
+
+    </section> <!-- end Contact Us -->
+
+    <!-- footer
+    ================================================== -->
+    <footer>
+
+        <div class="footer-main">
+            <div class="row">
+
+                <div class="col-four md-1-3 tab-full footer-info">
+
+                    <div class="footer-logo"></div>
+
+                    <h6 style="color:#767676;">
+                    Build models, not infrastructure.
+                    </h6>
+
+                    <p>
+                    Don't waste your data science team's time — <br>
+                    let us turn months of software engineering into an afternoon's project.
+                    </p>
+
+                    <ul class="footer-social-list">
+<!--
+                        <li>
+                            <a href="#"><i class="fa fa-facebook-square"></i></a>
+                        </li>
+-->
+                        <li>
+                            <a href="https://twitter.com/cadencedata"><i class="fa fa-twitter"></i></a>
+                        </li>
+<!--
+
+                        <li>
+                            <a href="#"><i class="fa fa-behance"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-dribbble"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                        </li>
+-->
+
+                    </ul>
+
+
+                </div> <!-- end footer-info -->
+
+                <div class="col-three md-1-3 tab-1-2 mob-full footer-contact">
+
+                    <h4>Contact Information</h4>
+
+                    <p>
+                    220 York St<br>
+                    New Haven, CT <br>
+                    06510 US<br>
+                    </p>
+
+                    <p>
+                    contact@cdnc.co <br>
+<!--
+                    Phone: (+63) 555 1212 <br>
+                    Fax: (+63) 555 0100
+-->
+                    </p>
+
+                </div> <!-- end footer-contact -->
+
+                <div class="col-five md-1-3 tab-1-2 mob-full footer-disclaimers">
+
+                    <h4>Disclaimers</h4>
+
+                    <p>
+                        Any data you submitted to Cadence is for internal use only and will never be shared, released, or otherwise published withour your consent. Your inquiry is confidential.
+                    </p>
+
+                    <p>
+                        We use cookies to analyse our traffic. We also share information about your use of our site with analytics partners who may combine it with other information you’ve provided to them or they’ve collected from your use of their services.
+                    </p>
+
+                </div> <!-- end footer-disclaimers -->
+
+            </div> <!-- /row -->
+        </div> <!-- end footer-main -->
+
+
+      <div class="footer-bottom">
+
+      	<div class="row">
+
+      		<div class="col-twelve">
+	      		<div class="copyright">
+		         	<span>© Copyright Cadence Data 2018. All rights reserved.</span>
+		         </div>
+
+		         <div id="go-top">
+		            <a class="smoothscroll" title="Back to Top" href="#top"><i class="icon-arrow-up"></i></a>
+		         </div>
+	      	</div>
+
+      	</div> <!-- end footer-bottom -->
+
+      </div>
+
+    </footer>
+
+    <div id="preloader">
+    	<div id="loader"></div>
+    </div>
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115153817-1"></script>
+    		<script>
+    			window.dataLayer = window.dataLayer || [];
+    			function gtag(){dataLayer.push(arguments);}
+    			gtag('js', new Date());
+    			gtag('config', 'UA-115153817-1');
+    		</script>
+    		<!-- End Google Analytics -->
+
+
+</body>
+
+
+
+</html>
