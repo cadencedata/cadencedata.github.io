@@ -1079,6 +1079,10 @@ h1.intro-header {
   padding-bottom: 3.6rem;
 }
 
+h1.no-bottom-padding {
+  padding-bottom: 0rem !important;
+}
+
 h1.intro-header::before {
   display: block;
   content: "";
