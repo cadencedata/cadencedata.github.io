@@ -1084,7 +1084,7 @@ h1.intro-header::before {
   content: "";
   height: 2px;
   width: 70px;
-  background-color: #39b54a;
+  background-color: transparent;
   position: absolute;
   left: 0;
   bottom: 0;
@@ -1869,6 +1869,22 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
   margin-bottom: 3rem;
 }
 
+.about-comparison {
+  padding-top: 7.2rem;
+  padding-bottom: 6rem;
+}
+
+.about-comparison h1.intro-header {
+  text-align: center;
+}
+
+.about-comparison h1.intro-header::before {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
 .about-how {
   padding-top: 7.2rem;
   padding-bottom: 6rem;
@@ -1952,6 +1968,9 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
   vertical-align: bottom;
 }
 
+.about-image img {
+  vertical-align: bottom;
+}
 
 /* -------------------------------------------------------------------
  * responsive:
